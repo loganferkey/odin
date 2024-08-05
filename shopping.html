@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list example</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+
+      li button {
+        font-size: 12px;
+        margin-left: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>My shopping list</h1>
+
+    <div>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item">
+      <button id="confirm">Add item</button>
+    </div>
+
+    <ul>
+
+    </ul>
+
+    <script>
+        const list = document.querySelector("ul");
+        const listInput = document.querySelector("input");
+        const confirm = document.querySelector("button#confirm")
+        let listCount = 0;
+
+        const addToList = (e) => {
+            let inputValue = listInput.value;
+            if (inputValue === "") return;
+
+            // Create the parent node for the item name and delete button
+            let listItem = document.createElement("li");
+            listItem.id = listCount;
+
+            // Span containing name of item entered
+            let itemName = document.createElement("span");
+            itemName.innerText = inputValue;
+            listItem.appendChild(itemName);
+
+            // Button that can delete the list item when clicked
+            let deleteButton = document.createElement("button");
+            deleteButton.textContent = "Delete";
+            deleteButton.addEventListener("click", (e) => {
+                e.target.parentElement.remove();
+            });
+            listItem.appendChild(deleteButton);
+
+            // FOCUS UP !
+            list.appendChild(listItem);
+            listInput.value = "";
+            listInput.focus();
+
+            listCount++;
+        }
+
+        confirm.addEventListener("click", addToList);
+
+    </script>
+  </body>
+</html>

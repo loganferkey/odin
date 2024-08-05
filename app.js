@@ -1,3 +1,5 @@
+// DOM Manipulation
+
 const container = document.querySelector("#container");
 
 let redText = document.createElement("p");
@@ -23,3 +25,12 @@ pinkDiv.appendChild(p);
 
 container.appendChild(pinkDiv);
 
+// Events
+
+const btn2 = document.querySelector("#btn2");
+btn2.onclick = () => alert("Hello World");
+
+const btn3 = document.querySelector("#btn3");
+btn3.addEventListener("click", () => {
+    alert("Hello World");
+});
