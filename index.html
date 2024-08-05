@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="font-mono text-gray-800 bg-gray-900">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odin Project</title>
+    <title>✂️ Rock, Paper, Scissors</title>
     <script src="/app.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="">
+    <section class="container flex flex-col items-center justify-center h-screen gap-2">
+        <div id="output" class="bg-gray-200 w-1/3 h-72 rounded p-3 text-s overflow-y-auto flex flex-col-reverse">
+            <p>Computer won round 2!</p>
+            <p>Computer won round 1!</p>
+        </div>
+        <div class="flex flex-row justify-center gap-2" id="buttonRow">
+            <button id="r" class="bg-gray-200 px-2 rounded hover:bg-gray-100 transition duration-100 border-2 border-gray-500 w-32">🪨Rock</button>
+            <button id="p" class="bg-gray-200 px-2 rounded hover:bg-gray-100 transition duration-100 border-2 border-gray-500 w-32">🧻Paper</button>
+            <button id="s" class="bg-gray-200 px-2 rounded hover:bg-gray-100 transition duration-100 border-2 border-gray-500 w-32">✂️Scissors</button>
+        </div>
+    </section>
 </body>
 </html>
