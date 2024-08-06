@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="font-mono text-gray-800 bg-gray-900">
+<html lang="en" class="font-mono text-gray-800 bg-[#1c1c1c]">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +7,32 @@
     <script src="/script.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="m-5 overflow-y-hidden">
-    <div class="container">
-        
+<body class="m-5 flex flex-col items-center justify-center h-screen overflow-hidden text-white">
+    <div class="calculator flex flex-col p-3 bg-[#525252] w-full sm:w-[350px] gap-2">
+        <div class="flex flex-row justify-between items-center bg-[#1c1c1c]">
+            <button class="bg-[#d61515] hover:bg-[#ff0000] transition duration-100 p-2">AC</button>
+            <span id="output" class="p-2">0</span>
+        </div>
+        <div class="grid grid-cols-5 gap-2">
+            <div class="grid grid-cols-3 col-span-4 gap-2">
+                <button id="1" class="bg-[#1c1c1c] hover:bg-[#262626] transition duration-100">1</button>
+                <button id="2" class="bg-[#1c1c1c] hover:bg-[#262626] transition duration-100">2</button>
+                <button id="3" class="bg-[#1c1c1c] hover:bg-[#262626] transition duration-100">3</button>
+                <button id="4"class="bg-[#1c1c1c] hover:bg-[#262626] transition duration-100">4</button>
+                <button id="5" class="bg-[#1c1c1c] hover:bg-[#262626] transition duration-100">5</button>
+                <button id="6" class="bg-[#1c1c1c] hover:bg-[#262626] transition duration-100">6</button>
+                <button id="7" class="bg-[#1c1c1c] hover:bg-[#262626] transition duration-100">7</button>
+                <button id="8" class="bg-[#1c1c1c] hover:bg-[#262626] transition duration-100">8</button>
+                <button id="9" class="bg-[#1c1c1c] hover:bg-[#262626] transition duration-100">9</button>
+                <button id="0" class="bg-[#1c1c1c] hover:bg-[#262626] transition duration-100 col-span-3">0</button>
+            </div>
+            <div class="grid grid-cols-1 gap-2">
+                <button id="/" class="bg-[#1c1c1c] hover:bg-[#262626] transition duration-100">/</button>
+                <button id="*" class="bg-[#1c1c1c] hover:bg-[#262626] transition duration-100">*</button>
+                <button id="-" class="bg-[#1c1c1c] hover:bg-[#262626] transition duration-100">-</button>
+                <button id="+" class="bg-[#1c1c1c] hover:bg-[#262626] transition duration-100">+</button>
+            </div>
+        </div>
     </div>
 </body>
 </html>
