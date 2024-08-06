@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odin Project</title>
+    <title>🎛️ Etch-a-Sketch</title>
     <script src="/script.js" defer></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=aspect-ratio"></script>
 </head>
-<body class="m-5 overflow-y-hidden">
-    <div class="container">
-        
+<body class="m-2 flex flex-col justify-center items-center h-screen gap-2">
+    <div id="container" class="container flex flex-wrap w-[650px] h-[650px] bg-gray-400">
+    </div>
+    <div class="flex flex-row justify-between items-center w-[650px]">
+        <button id="randomizeGrid" class="border-2 border-gray-600 px-3 bg-gray-400 hover:bg-gray-300 transition duration-100">Randomize</button>
+        <div class="flex flex-row justify-center items-center gap-3">
+            <button id="decrementSize" class="border-2 border-gray-600 px-3 bg-gray-400 hover:bg-gray-300 transition duration-100">-</button>
+            <span id="gridSizeDisplay" class="text-gray-400">60</span>
+            <button id="incrementSize" class="border-2 border-gray-600 px-3 bg-gray-400 hover:bg-gray-300 transition duration-100">+</button>
+        </div>
+        <button id="clearGrid" class="border-2 border-gray-600 px-3 bg-gray-400 hover:bg-gray-300 transition duration-100">Clear</button>
     </div>
 </body>
 </html>
